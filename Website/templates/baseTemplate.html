@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <!--CSS //-->
+            <!--legacy bug fix//-->
+        <link></link>
+        <link rel="stylesheet" href="{{url_for('Code/CSS/bootstrap4', filename='bootstrap.css'}}" />
+        <link rel="stylesheet" href="{{url_for('Code/CSS', filename='common.css'}}" />
+        <!--CSS extension hook//-->
+        {% block cssExtension %}
+        {% endblock%}
+        
+        <!--Scripts //-->
+            <!--legacy bug fix//-->
+        <script></script>
+        <script rel="stylesheet" href="{{url_for('Code/JS/jquery, filename='jquery.min.js'}}" />
+        <script rel="stylesheet" href="{{url_for('Code/JS/popper, filename='popper.js'}}" />
+        <script rel="stylesheet" href="{{url_for('Code/JS/bootstrap, filename='bootstrap.bundle.js}}" />
+        <script rel="stylesheet" href="{{url_for('Code/JS, filename='common.js}}" />
+        <!--CSS extension hook//-->
+        {% block jsExtension %}
+        {% endblock%}
+    </head>
+    
+    <body>
+        {% include 'nav.html' %}
+        
+        <div id="headerContainer">
+            {% block headerContent %}
+            {% endblock %}
+        </div>
+        
+        <div id="contentContainer">
+            {% block primaryContent %}
+            {% endblock %}
+        </div>
+        
+        <div id="footerContainer">
+            {% block footerContent %}
+            {% endblock %}
+        </id>
+    </body>
+</html>

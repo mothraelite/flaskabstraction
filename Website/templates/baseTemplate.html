@@ -2,24 +2,24 @@
 <html>
     <head>
         <!--CSS //-->
-            <!--legacy bug fix//-->
+            <!--legacy bug fix //-->
         <link></link>
-        <link rel="stylesheet" href="{{url_for('Code/CSS/bootstrap4', filename='bootstrap.css'}}" />
-        <link rel="stylesheet" href="{{url_for('Code/CSS', filename='common.css'}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS/bootstrap4/bootstrap.css')}}"></link>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS/common.css')}}"></link>
         <!--CSS extension hook//-->
         {% block cssExtension %}
-        {% endblock%}
+        {% endblock %}
         
         <!--Scripts //-->
-            <!--legacy bug fix//-->
+            <!--legacy bug fix //-->
         <script></script>
-        <script rel="stylesheet" href="{{url_for('Code/JS/jquery, filename='jquery.min.js'}}" />
-        <script rel="stylesheet" href="{{url_for('Code/JS/popper, filename='popper.js'}}" />
-        <script rel="stylesheet" href="{{url_for('Code/JS/bootstrap, filename='bootstrap.bundle.js}}" />
-        <script rel="stylesheet" href="{{url_for('Code/JS, filename='common.js}}" />
-        <!--CSS extension hook//-->
+        <script href="{{url_for('static', filename='JS/jquery/jquery.min.js')}}"></script>
+        <script href="{{url_for('static', filename='JS/popper/popper.js')}}"></script>
+        <script href="{{url_for('static', filename='JS/bootstrap/bootstrap.bundle.js')}}"></script>
+        <script href="{{url_for('static', filename='JS/common.js')}}"></script>
+        <!--CSS extension hook //-->
         {% block jsExtension %}
-        {% endblock%}
+        {% endblock %}
     </head>
     
     <body>
@@ -38,6 +38,8 @@
         <div id="footerContainer">
             {% block footerContent %}
             {% endblock %}
+            <div class="box">
+            </div>
         </id>
     </body>
 </html>

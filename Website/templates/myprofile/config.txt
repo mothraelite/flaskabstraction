@@ -1,0 +1,4 @@
+myprofile
+{name}
+name
+["GET", "POST"]
